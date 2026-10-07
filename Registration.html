@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Form</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 11px;
+            background: white;
+            margin: 0;
+            padding: 45px;
+        }
+
+        .page {
+            width: 620px;
+            min-height: 700px;
+            margin: auto;
+            border: 1px solid #222;
+            display: flex;
+        }
+
+        .left {
+            width: 70px;
+            border-right: 1px solid #222;
+        }
+
+        .form-container {
+            width: 475px;
+            background: #eeeeee;
+            padding: 5px 8px;
+        }
+
+        .required {
+            color: red;
+            font-weight: bold;
+        }
+
+        .top-note {
+            font-size: 9px;
+            margin-bottom: 6px;
+        }
+
+        .steps {
+            font-size: 10px;
+            margin-bottom: 6px;
+        }
+
+        .steps span {
+            margin-right: 25px;
+        }
+
+        h3 {
+            color: red;
+            font-size: 13px;
+            margin: 5px 0 2px;
+        }
+
+        .section-note {
+            margin: 0 0 3px 0;
+            font-size: 10px;
+        }
+
+        .form-row {
+            display: flex;
+            align-items: center;
+            margin: 1px 0;
+        }
+
+        .label {
+            width: 145px;
+            text-align: right;
+            font-weight: bold;
+            padding-right: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select {
+            height: 15px;
+            width: 160px;
+            border: 1px solid #aaa;
+            box-sizing: border-box;
+            font-size: 10px;
+            padding: 1px 3px;
+        }
+
+        .wide {
+            width: 200px !important;
+        }
+
+        .country {
+            width: 200px !important;
+        }
+
+        .radio-group {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            font-size: 10px;
+        }
+
+        .radio-group input,
+        .check-group input {
+            margin: 0 2px 0 0;
+            vertical-align: middle;
+        }
+
+        .other-amount {
+            width: 65px !important;
+        }
+
+        .small-input {
+            width: 55px !important;
+        }
+
+        .months {
+            width: 55px !important;
+        }
+
+        .ack {
+            margin-top: 2px;
+        }
+
+        .additional {
+            margin-top: 7px;
+        }
+
+        .checkbox-row {
+            display: flex;
+            align-items: flex-start;
+            margin: 3px 0;
+            font-size: 10px;
+        }
+
+        .checkbox-row input {
+            margin: 1px 5px 0 0;
+        }
+
+        textarea {
+            width: 215px;
+            height: 47px;
+            resize: none;
+            border: 1px solid #999;
+            font-size: 10px;
+        }
+
+        .comments {
+            display: flex;
+            align-items: center;
+            margin-top: 5px;
+        }
+
+        .comments-label {
+            width: 145px;
+            text-align: right;
+            padding-right: 5px;
+            font-weight: bold;
+        }
+
+        .contact-section {
+            display: flex;
+            margin-top: 4px;
+        }
+
+        .contact-label {
+            width: 145px;
+            text-align: right;
+            padding-right: 5px;
+            font-weight: bold;
+        }
+
+        .contact-options {
+            line-height: 14px;
+        }
+
+        .bottom {
+            margin-top: 8px;
+            font-size: 9px;
+        }
+
+        .buttons {
+            text-align: center;
+            margin: 5px 0;
+        }
+
+        button {
+            font-size: 10px;
+            padding: 1px 10px;
+        }
+
+        .secure {
+            margin-top: 8px;
+        }
+
+        .support {
+            margin-top: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="page">
+
+    <div class="left"></div>
+
+    <div class="form-container">
+
+        <div class="top-note">
+            <span class="required">*</span> - Denotes Required Information
+        </div>
+
+        <div class="steps">
+            <span><b>&gt; 1</b> Donation</span>
+            <span><b>&gt; 2</b> Confirmation</span>
+            <span><b>&gt;</b> Thank You!</span>
+        </div>
+
+        <form>
+
+            <h3>Donor Information</h3>
+
+            <div class="form-row">
+                <div class="label">First Name<span class="required">*</span></div>
+                <input type="text" autofocus>
+            </div>
+
+            <div class="form-row">
+                <div class="label">Last Name<span class="required">*</span></div>
+                <input type="text">
+            </div>
+
+            <div class="form-row">
+                <div class="label">Company</div>
+                <input type="text">
+            </div>
+
+            <div class="form-row">
+                <div class="label">Address 1<span class="required">*</span></div>
+                <input type="text">
+            </div>
+
+            <div class="form-row">
+                <div class="label">Address 2</div>
+                <input type="text">
+            </div>
+
+            <div class="form-row">
+                <div class="label">City<span class="required">*</span></div>
+                <input type="text">
+            </div>
+
+            <div class="form-row">
+                <div class="label">State<span class="required">*</span></div>
+                <select>
+                    <option>Select a State</option>
+                    <option>Alabama</option>
+                    <option>California</option>
+                    <option>Florida</option>
+                    <option>New York</option>
+                    <option>Texas</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <div class="label">Zip Code<span class="required">*</span></div>
+                <input type="text">
+            </div>
+
+            <div class="form-row">
+                <div class="label">Country<span class="required">*</span></div>
+                <select class="country">
+                    <option>Select a Country</option>
+                    <option>Bangladesh</option>
+                    <option>Canada</option>
+                    <option>India</option>
+                    <option>United Kingdom</option>
+                    <option>United States</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <div class="label">Phone</div>
+                <input type="tel">
+            </div>
+
+            <div class="form-row">
+                <div class="label">Fax</div>
+                <input type="text">
+            </div>
+
+            <div class="form-row">
+                <div class="label">Email<span class="required">*</span></div>
+                <input type="email">
+            </div>
+
+            <div class="form-row">
+                <div class="label">Donation Amount<span class="required">*</span></div>
+
+                <div class="radio-group">
+                    <label><input type="radio" name="amount"> None</label>
+                    <label><input type="radio" name="amount"> $50</label>
+                    <label><input type="radio" name="amount"> $75</label>
+                    <label><input type="radio" name="amount"> $100</label>
+                    <label><input type="radio" name="amount"> $250</label>
+                    <label><input type="radio" name="amount"> Other</label>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="label">(Check a button or type in your<br>amount)</div>
+                <span>Other Amount $</span>
+                <input type="text" class="other-amount">
+            </div>
+
+            <div class="form-row">
+                <div class="label">Recurring Donation</div>
+                <label>
+                    <input type="checkbox">
+                    I am interested in giving on a regular basis.
+                </label>
+            </div>
+
+            <div class="form-row">
+                <div class="label">(Check if Yes)</div>
+                <span>Monthly Credit Card $</span>
+                <input type="text" class="small-input">
+                <span style="margin-left:5px;">For</span>
+                <input type="text" class="months">
+                <span style="margin-left:3px;">Months</span>
+            </div>
+
+            <h3>Honorarium and Memorial Donation Information</h3>
+
+            <div class="form-row">
+                <div class="label">I would like to make this<br>donation</div>
+
+                <div>
+                    <label>
+                        <input type="radio" name="memorial">
+                        To Honor
+                    </label><br>
+
+                    <label>
+                        <input type="radio" name="memorial">
+                        In Memory of
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="label">Name</div>
+                <input type="text" class="wide">
+            </div>
+
+            <div class="form-row">
+                <div class="label">Acknowledge Donation to</div>
+                <input type="text" class="wide">
+            </div>
+
+            <div class="form-row">
+                <div class="label">Address</div>
+                <input type="text" class="wide">
+            </div>
+
+            <div class="form-row">
+                <div class="label">City</div>
+                <input type="text" class="wide">
+            </div>
+
+            <div class="form-row">
+                <div class="label">State</div>
+                <select>
+                    <option>Select a State</option>
+                    <option>Alabama</option>
+                    <option>California</option>
+                    <option>Florida</option>
+                    <option>New York</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <div class="label">Zip</div>
+                <input type="text" class="wide">
+            </div>
+
+            <h3 class="additional">Additional Information</h3>
+
+            <div class="section-note">
+                Please enter your name, company or organization as you would like it to appear in our publications:
+            </div>
+
+            <div class="form-row">
+                <div class="label">Name</div>
+                <input type="text" class="wide">
+            </div>
+
+            <div class="checkbox-row">
+                <input type="checkbox">
+                I would like my gift to remain anonymous.
+            </div>
+
+            <div class="checkbox-row">
+                <input type="checkbox">
+                My employer offers a matching gift program. I will mail the matching gift form.
+            </div>
+
+            <div class="checkbox-row">
+                <input type="checkbox">
+                Please save the cost of acknowledging this gift by not mailing a thank you letter.
+            </div>
+
+            <div class="comments">
+                <div class="comments-label">
+                    Comments<br>
+                    <small>(Please type any questions or feedback here)</small>
+                </div>
+
+                <textarea></textarea>
+            </div>
+
+            <div class="contact-section">
+                <div class="contact-label">How may we contact you?</div>
+
+                <div class="contact-options">
+                    <label><input type="checkbox"> E-mail</label><br>
+                    <label><input type="checkbox"> Postal Mail</label><br>
+                    <label><input type="checkbox"> Telephone</label><br>
+                    <label><input type="checkbox"> Fax</label>
+                </div>
+            </div>
+
+            <div class="contact-section">
+                <div class="contact-label">
+                    <span style="font-weight:normal;">
+                        I would like to receive newsletters and information about special events by:
+                    </span>
+                </div>
+
+                <div class="contact-options">
+                    <label><input type="checkbox"> E-mail</label><br>
+                    <label><input type="checkbox"> Postal Mail</label>
+                </div>
+            </div>
+
+            <div class="checkbox-row" style="margin-top:5px;">
+                <input type="checkbox">
+                I would like information about volunteering with the organization.
+            </div>
+
+            <div class="buttons">
+                <button type="reset">Reset</button>
+                <button type="submit">Continue</button>
+            </div>
+
+            <div class="bottom">
+                <div class="secure">
+                    🔒 Donate online with confidence. You are on a secure server.
+                </div>
+
+                <div class="support">
+                    If you have any problems or questions, please contact support.
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
